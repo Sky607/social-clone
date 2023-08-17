@@ -9,7 +9,7 @@ This projects  is developed with the latest version of python and its framework 
 ## Installation
 To load the above project from github run the following command in your cmd
 ```sh
-git clone https://github.com/Sky607/social_clone.git
+git clone https://github.com/Sky607/social-clone.git
 ```
 # Note 
 The above command only works if git is installed in your environment
