@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+<title>{% block title %}Post List{%endblock%}</title>
+{% block content %}
+<div class="centerstage">
+
+
+    {% for post in post_list %}
+        <div class="post">
+
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <img src="{{ post.post_image.url}}" alt="connect" width="300px" height="200px">
+            {%if img_obj.has_image %}
+            <div class="image">
+               <h1>{{post.count}}
+            </div>
+            {%endif %}
+            <div class="date">
+                <p>Published on: {{ post.published_date|date:"D M Y"}}</p>
+            </div>
+            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
